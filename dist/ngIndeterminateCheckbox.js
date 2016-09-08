@@ -57,9 +57,9 @@ angular.module('ngIndeterminateCheckbox', [])
         selectNode(item);
             
       	angular.forEach(item[subtree], function(child) {
-  				child.checked = isChecked;
-  				selectTreeNodes(child);
-  			});
+          child.checked = isChecked;
+          selectTreeNodes(child);
+        });
       }  
         
       function selectNodes(item) {
@@ -67,14 +67,14 @@ angular.module('ngIndeterminateCheckbox', [])
         selectNode(item);
         
       	angular.forEach(nodes, function(child) {
-  				child.checked = isChecked;
-  				selectNode(child);
-  			});
+          child.checked = isChecked;
+          selectNode(child);
+        });
       }  
         
       function selectNode(item) {
           var index = collection.indexOf(item);
-      
+            
           if (item.checked) {
             index === -1 && collection.push(item);
           } else {
