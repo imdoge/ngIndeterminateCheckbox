@@ -6,7 +6,7 @@ angular.module('ngIndeterminateCheckbox', [])
         var nodes = scope.$eval(attrs.nodes);
         var treeview = scope.$eval(attrs.treeview);
         var subtree = attrs.subtree || 'items';
-        var collection = scope.$eval(attrs.selectedNodes);
+        var collection = scope.$eval(attrs.selectedNodes) || [];
         
         if (treeview) {
           element.on('change', function () {
@@ -35,7 +35,7 @@ angular.module('ngIndeterminateCheckbox', [])
               if (val.checked || val.indeterminate) {
                 some = true;
               }
-            })
+            });
             
             if (all) {
               node.checked = true;
@@ -49,7 +49,7 @@ angular.module('ngIndeterminateCheckbox', [])
             
             selectNode(node);
           }
-        }, true)
+        }, true);
        
         
       function selectTreeNodes(item) {
