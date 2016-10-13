@@ -3,7 +3,7 @@ angular indeterminate checkbox directive
 
 ## Use
 
-```javascript
+```html
 <input type="checkbox" 
        ng-model="vm.all.checked"
        indeterminate-checkbox
